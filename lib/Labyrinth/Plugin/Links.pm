@@ -3,7 +3,7 @@ package Labyrinth::Plugin::Links;
 use warnings;
 use strict;
 
-our $VERSION = '1.03';
+our $VERSION = '1.04';
 
 =head1 NAME
 
@@ -48,8 +48,8 @@ my %fields = (
     linkid      => { type => 0, html => 0 },
     catid       => { type => 0, html => 0 },
     href        => { type => 1, html => 1 },
-    title       => { type => 1, html => 1 },
-    body        => { type => 0, html => 1 },
+    title       => { type => 1, html => 3 },
+    body        => { type => 0, html => 2 },
 );
 
 my (@mandatory,@allfields);
@@ -72,6 +72,8 @@ my %adddata = (
     title       => '',
     body        => '',
 );
+
+my $protocol = qr{(?:http|https|ftp|afs|news|nntp|mid|cid|mailto|wais|prospero|telnet|gopher|git)://};
 
 # -------------------------------------
 # The Subs
@@ -180,7 +182,7 @@ sub Delete {
 }
 
 sub CheckLink {
-    if($cgiparams{href} && $cgiparams{href} !~ m!^(/|https?|ftp)!) {
+    if($cgiparams{href} && $cgiparams{href} !~ m!^(/|$protocol)!) {
         $cgiparams{href} = 'http://' . $cgiparams{href};
     }
 }

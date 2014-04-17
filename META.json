@@ -1,6 +1,6 @@
 {
     "name": "Labyrinth-Plugin-Links",
-    "version": "1.03",
+    "version": "1.04",
     "abstract": "Links plugin for the Labyrinth framework",
     "author": [
         "Barbie (BARBIE) <barbie@cpan.org>"
@@ -23,7 +23,12 @@
     "prereqs" : {
         "test" : {
             "requires": {
+                "Config::IniFiles": "0",
+                "File::Basename": "0",
+                "File::Copy": "0",
+                "File::Path": "0",
                 "IO::File": "0",
+                "Module::Pluggable": "0",
                 "Test::More": "0.70"
             },
             "recommends": {
@@ -44,7 +49,7 @@
     "provides": {
         "Labyrinth::Plugin::Links": {
             "file": "lib/Labyrinth/Plugin/Links.pm",
-            "version": "1.03"
+            "version": "1.04"
         }
     },
     "no_index": {

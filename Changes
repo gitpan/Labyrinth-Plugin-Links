@@ -1,6 +1,11 @@
 Changes for the Labyrinth-Plugin-Links
 ======================================
 
+1.05	2014-04-24
+        - skip functional tests if we cannot create test environment.
+        - added error reporting to test handler.
+        - more diagnostics added to test suite.
+
 1.04	2014-04-17
         - extended protocols acceptable in href string.
         - database schema moved to UTF8.

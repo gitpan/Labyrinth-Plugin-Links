@@ -1,6 +1,6 @@
 {
     "name": "Labyrinth-Plugin-Links",
-    "version": "1.05",
+    "version": "1.06",
     "abstract": "Links plugin for the Labyrinth framework",
     "author": [
         "Barbie (BARBIE) <barbie@cpan.org>"
@@ -41,7 +41,7 @@
         "runtime" : {
             "requires" : {
               "perl": "5.006",
-              "Labyrinth": "5.10"
+              "Labyrinth": "5.22"
             }
         }
     },
@@ -49,7 +49,7 @@
     "provides": {
         "Labyrinth::Plugin::Links": {
             "file": "lib/Labyrinth/Plugin/Links.pm",
-            "version": "1.05"
+            "version": "1.06"
         }
     },
     "no_index": {
